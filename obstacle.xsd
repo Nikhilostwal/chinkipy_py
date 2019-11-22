@@ -1,0 +1,42 @@
+<xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="msgBody">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" ref="Obstacles"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Obstacles">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="id"/>
+        <xsd:element ref="ObsLen"/>
+        <xsd:element ref="ObsWid"/>
+        <xsd:element ref="ObsHei"/>
+        <xsd:element ref="type"/>
+        <xsd:element ref="color"/>
+        
+      </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="pos">
+      <xsd:sequence>
+       <xsd:element ref="xPos" />
+       <xsd:element ref="yPos" />
+       <xsd:element ref="zPos" />
+      
+    
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="id" type="xs:string"/>
+  <xsd:element name="ObsLen" type="xsd:float"/>
+  <xsd:element name="ObsWid" type="xsd:float"/>
+  <xsd:element name="ObsHei" type="xsd:float"/>
+  <xsd:element name="type" minOccurs="0"/>
+  <xsd:element name="color" minOccurs="0"/>
+  <xsd:element name="xPos" type="xsd:float"/>
+  <xsd:element name="yPos" type="xsd:float"/>
+  <xsd:element name="zPos" type="xsd:float"/>
+  
+</xsd:schema>
